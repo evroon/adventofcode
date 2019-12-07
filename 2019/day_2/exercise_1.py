@@ -4,8 +4,6 @@ input = np.genfromtxt('input.txt', delimiter=',', dtype=int)
 input[1] = 12
 input[2] = 2
 
-
-# input = np.asarray([2,4,4,5,99,0])
 i = 0
 
 while i < len(input):
