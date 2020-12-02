@@ -5,16 +5,32 @@
 
 #include "lib.cpp"
 
-TEST(Day1Test, InputTest) {
-    ASSERT_EQ(23869440, run_day(1));
+std::vector<uint> days;
+std::map<uint, uint> expected_outputs = {
+    {1, 23869440},
+    {2, 354}
+};
+
+class CombinationsTest :
+    public ::testing::TestWithParam<uint> {};
+
+TEST_P(CombinationsTest, Basic) {
+    uint day_index = GetParam();
+    auto function = SolutionManager::get_singleton()->days[day_index];
+
+    ASSERT_EQ(expected_outputs[day_index], run_day(day_index));
 }
 
-TEST(Day2Test, InputTest) {
-    ASSERT_EQ(354, run_day(2));
-}
+INSTANTIATE_TEST_CASE_P(AllCombinations,
+                        CombinationsTest,
+                        ::testing::ValuesIn(days));
 
 int main(int argc, char **argv)
 {
+    for (auto day : SolutionManager::get_singleton()->days) {
+        days.push_back(day.first);
+    }
+
     ::testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
 }
