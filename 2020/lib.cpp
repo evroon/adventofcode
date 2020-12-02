@@ -2,6 +2,9 @@
 #include <fstream>
 #include <stdlib.h>
 #include <chrono>
+#include <map>
+
+#include "manager.h"
 
 #include "day01.cpp"
 #include "day02.cpp"
@@ -11,13 +14,11 @@ int run_day(uint day)
     std::ifstream input;
     int (*function)(std::ifstream &input) = nullptr;
     int result = -1;
+    auto days = SolutionManager::get_singleton()->days;
 
-    switch (day)
-    {
-    case  1: function = day1_part2; break;
-    case  2: function = day2_part2; break;
-
-    default:
+    if (days.count(day) > 0) {
+        function = days[day];
+    } else {
         std::cout << "Invalid day: " << day << std::endl;
         return -1;
     }

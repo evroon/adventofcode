@@ -3,6 +3,8 @@
 #include <stdlib.h>
 #include <vector>
 
+#include "manager.h"
+
 int day1_part2(std::ifstream& input)
 {
     std::string line;
@@ -25,3 +27,5 @@ int day1_part2(std::ifstream& input)
 
     return result;
 }
+
+ADD_SOLUTION(1)

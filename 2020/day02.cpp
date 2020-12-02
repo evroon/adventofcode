@@ -3,6 +3,8 @@
 #include <stdlib.h>
 #include <vector>
 
+#include "manager.h"
+
 int day2_part2(std::ifstream& input)
 {
     std::string line;
@@ -23,3 +25,5 @@ int day2_part2(std::ifstream& input)
 
     return occurences;
 }
+
+ADD_SOLUTION(2)
