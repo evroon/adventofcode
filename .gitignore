@@ -1,2 +1,13 @@
 *.out
 .vscode
+
+# CMake stuff etc.
+**/build
+CMake*
+!CMakeLists.txt
+*.cmake
+Makefile
+
+**/adventofcode
+run_tests
+run_day

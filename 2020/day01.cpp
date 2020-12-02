@@ -3,11 +3,11 @@
 #include <stdlib.h>
 #include <vector>
 
-int main()
+int day1_part2(std::ifstream& input)
 {
-    std::ifstream input("inputs/day01.txt");
     std::string line;
     std::vector<int> history;
+    int result = 0;
 
     while (std::getline(input, line))
     {
@@ -15,7 +15,7 @@ int main()
         for (int c = 0; c < history.size(); c++) {
             for (int d = 0; d < history.size(); d++) {
                 if (history[c] + history[d] + value == 2020) {
-                    std::cout << history[c] * history[d] * value << std::endl;
+                    result = history[c] * history[d] * value;
                     break;
                 }
             }
@@ -23,5 +23,5 @@ int main()
         history.push_back(value);
     }
 
-    return 0;
+    return result;
 }

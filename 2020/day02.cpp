@@ -3,9 +3,8 @@
 #include <stdlib.h>
 #include <vector>
 
-int main()
+int day2_part2(std::ifstream& input)
 {
-    std::ifstream input("inputs/day02.txt");
     std::string line;
     int occurences = 0;
 
@@ -22,7 +21,5 @@ int main()
         }
     }
 
-    std::cout << occurences << std::endl;
-
-    return 0;
+    return occurences;
 }
