@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Source: https://github.com/bertptrs/adventofcode/blob/master/2020/download.sh
+
 if [[ -z $AOC_SESSION ]]; then
 	echo "AOC_SESSION not set"
 	exit 1
