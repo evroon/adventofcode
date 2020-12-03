@@ -6,7 +6,6 @@
 
 int main(int argc, char **argv)
 {
-    std::ifstream input("inputs/day01.txt");
     if (argc < 2)
     {
         std::cout << "No day specified" << std::endl;
