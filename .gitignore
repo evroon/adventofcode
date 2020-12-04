@@ -3,6 +3,7 @@
 
 # CMake stuff etc.
 **/build
+**/target
 CMake*
 !CMakeLists.txt
 *.cmake
