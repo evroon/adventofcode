@@ -5,11 +5,13 @@
 #include <map>
 
 #include "manager.h"
+#include "utils.h"
 
 #include "day01.cpp"
 #include "day02.cpp"
 #include "day03.cpp"
 #include "day04.cpp"
+#include "day05.cpp"
 
 int run_day(uint day)
 {

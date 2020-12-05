@@ -17,6 +17,16 @@ int sum(const std::vector<int>& array)
     return result;
 }
 
+bool contains(const std::vector<int>& array, int element)
+{
+    for (int c = 0; c < array.size(); c++) {
+        if (array[c] == element)
+            return true;
+    }
+
+    return false;
+}
+
 std::pair<int, int> arg_min_and_max(const std::vector<int>& array)
 {
     int min = 1000000000;

@@ -4,7 +4,6 @@
 #include <vector>
 
 #include "manager.h"
-#include "utils.h"
 
 bool is_valid(const std::pair<std::string, std::string>& pair) {
     if (pair.first == "byr") {
