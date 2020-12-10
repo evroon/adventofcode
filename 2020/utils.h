@@ -84,6 +84,9 @@ std::vector<std::string> split_string(const std::string& p_src, const std::strin
     std::vector<int> find_result = find(p_src, p_delim);
     find_result.emplace(find_result.begin(), 0);
 
+    if (find_result.size() < 2)
+        return {p_src};
+
     for (int c = 0; c < find_result.size(); c++) {
         int start = find_result[c] + (c != 0 ? p_delim.size() : 0);
         result.push_back(p_src.substr(start, find_result[c+1] - start));
