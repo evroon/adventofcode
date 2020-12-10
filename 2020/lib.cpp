@@ -15,6 +15,7 @@
 #include "day06.cpp"
 #include "day07.cpp"
 #include "day08.cpp"
+#include "day09.cpp"
 
 int run_day(uint day)
 {
