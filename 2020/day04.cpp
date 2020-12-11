@@ -44,10 +44,10 @@ bool is_valid(const std::pair<std::string, std::string>& pair) {
     return false;
 }
 
-int day4_part2(std::ifstream& input)
+R day4_part2(std::ifstream& input)
 {
     std::string line;
-    int valid_passports = 0;
+    R valid_passports = 0;
     std::string str((std::istreambuf_iterator<char>(input)),
                     std::istreambuf_iterator<char>());
 

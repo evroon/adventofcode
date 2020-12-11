@@ -6,7 +6,7 @@
 #include "lib.cpp"
 
 std::vector<uint> days;
-std::map<uint, uint> expected_outputs = {
+std::map<uint, R> expected_outputs = {
     {1, 23869440},
     {2, 354},
     {3, 1666768320},
@@ -16,7 +16,7 @@ std::map<uint, uint> expected_outputs = {
     {7, 6683},
     {8, 1984},
     {9, 129444555},
-    {10, 256},
+    {10, 1973822685184},
     {11, 2144}
 };
 

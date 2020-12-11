@@ -12,7 +12,7 @@ int main(int argc, char **argv)
         return -1;
     }
 
-    int result = run_day(std::atoi(argv[1]));
+    long result = run_day(std::atoi(argv[1]));
 
     std::cout << "Result: " << result << std::endl;
     return 0;

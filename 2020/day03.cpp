@@ -20,7 +20,7 @@ int traverse_slope(const std::vector<std::string>& map, uint offset_x, uint offs
     return result;
 }
 
-int day3_part2(std::ifstream& input)
+R day3_part2(std::ifstream& input)
 {
     std::string line;
     std::vector<std::string> map;

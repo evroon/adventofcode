@@ -6,7 +6,7 @@
 
 #include "manager.h"
 
-int day9_part1(std::ifstream& input)
+R day9_part1(std::ifstream& input)
 {
     std::string line;
     int pointer = 0;
@@ -32,7 +32,7 @@ int day9_part1(std::ifstream& input)
     return -1;
 }
 
-int day9_part2(std::ifstream& input)
+R day9_part2(std::ifstream& input)
 {
     std::string line;
     int pointer = 0;

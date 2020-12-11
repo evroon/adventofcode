@@ -5,10 +5,10 @@
 
 #include "manager.h"
 
-int day2_part2(std::ifstream& input)
+R day2_part2(std::ifstream& input)
 {
     std::string line;
-    int occurences = 0;
+    R occurences = 0;
 
     while (std::getline(input, line))
     {

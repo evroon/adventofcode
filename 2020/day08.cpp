@@ -36,7 +36,7 @@ int execute(const std::vector<std::pair<std::string, int>>& program)
     return accumulator;
 }
 
-int day8_part1(std::ifstream& input)
+R day8_part1(std::ifstream& input)
 {
     std::string line;
     int pointer = 0;
@@ -51,7 +51,7 @@ int day8_part1(std::ifstream& input)
     return execute(program);
 }
 
-int day8_part2(std::ifstream& input)
+R day8_part2(std::ifstream& input)
 {
     std::string line;
     int pointer = 0;
@@ -71,7 +71,7 @@ int day8_part2(std::ifstream& input)
         else if (program[c].first == "jmp")
             program[c].first = "nop";
 
-        int result = execute(program);
+        R result = execute(program);
         if (result != -1)
             return result;
     }

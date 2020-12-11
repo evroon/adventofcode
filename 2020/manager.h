@@ -3,6 +3,8 @@
 #include <iostream>
 #include <map>
 
+typedef long long R;
+
 // Use ugly macros because I like to overengineer my code.
 #define ADD_SOLUTION(X) \
     inline bool initialize_##X() { \
@@ -14,10 +16,10 @@
 class SolutionManager
 {
 public:
-    void add_day(uint day, int (*function)(std::ifstream &input));
+    void add_day(uint day, R (*function)(std::ifstream &input));
 
     static SolutionManager* get_singleton();
-    std::map<uint, int (*)(std::ifstream &input)> days;
+    std::map<uint, R (*)(std::ifstream &input)> days;
 
 private:
     SolutionManager() = default;

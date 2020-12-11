@@ -7,9 +7,7 @@
 
 #include "manager.h"
 
-typedef long long L;
-
-int day10_part1(std::ifstream& input)
+R day10_part1(std::ifstream& input)
 {
     std::string line;
     std::vector<int> list;
@@ -29,50 +27,31 @@ int day10_part1(std::ifstream& input)
     return map[1] * (map[3] + 1);
 }
 
-int traverse(std::vector<L>& list, int index, int& count) {
-    int result = 0;
-
-    return result;
-}
-
-int day10_part2(std::ifstream& input)
+R day10_part2(std::ifstream& input)
 {
     std::string line;
-    std::vector<L> list;
-    std::vector<std::vector<int>> diff;
-    std::map<int, int> map;
+    std::vector<int> list;
+    std::vector<R> methods;
 
     while (std::getline(input, line))
         list.push_back(atoi(line.c_str()));
 
+    list.push_back(0);
     std::sort(list.begin(), list.end());
-    int r = 1;
+    
+    methods.resize(list.size());
+    methods[0] = 1;
 
-    for (int x = 1; x < list.size(); x++) {
-        std::vector<int> result;
+    for (int x = 0; x < list.size(); x++) {
+        for (int y = x + 1; y < list.size(); y++) {
+            if (list[y] - list[x] > 3)
+                break;
 
-        int diff1 = list[x] - list[x-1];
-        if (diff1 <= 3)
-            result.push_back(diff1);
-
-        if (x > 1) {
-            int diff2 = list[x] - list[x-2];
-            if (diff2 <= 3)
-                result.push_back(diff1);
+            methods[y] += methods[x];
         }
-
-        if (x > 2) {
-            int diff3 = list[x] - list[x-3];
-            if (diff3 <= 3)
-                result.push_back(diff1);
-        }
-
-        r *= (result.size() - 1 < 2 ? 1 : result.size() - 1);
-        diff.push_back(result);
     }
 
-    map[list[0]]++;
-    return r;
+    return methods[methods.size() - 1];
 }
 
 ADD_SOLUTION(10)

@@ -7,7 +7,6 @@
 
 #include "manager.h"
 
-typedef long long L;
 typedef std::vector<std::vector<char>> LIST;
 
 int count_neighbours(char a, int x, int y, LIST& list)
@@ -71,7 +70,7 @@ int count_occupied(LIST& list) {
     return result;
 }
 
-int day11_part2(std::ifstream& input)
+R day11_part2(std::ifstream& input)
 {
     std::string line;
     LIST list;

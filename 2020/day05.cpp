@@ -6,7 +6,7 @@
 
 #include "manager.h"
 
-int day5_part1(std::ifstream& input)
+R day5_part1(std::ifstream& input)
 {
     std::string line;
     std::vector<int> ids;
@@ -29,7 +29,7 @@ int day5_part1(std::ifstream& input)
     return min_and_max(ids).second;
 }
 
-int day5_part2(std::ifstream& input)
+R day5_part2(std::ifstream& input)
 {
     std::string line;
     std::vector<int> ids;

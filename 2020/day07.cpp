@@ -19,7 +19,7 @@ int traverse(M& map, const std::string& color) {
     return result;
 }
 
-int day7_part2(std::ifstream& input)
+R day7_part2(std::ifstream& input)
 {
     std::string line;
     std::vector<int> ids;

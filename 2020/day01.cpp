@@ -5,11 +5,11 @@
 
 #include "manager.h"
 
-int day1_part2(std::ifstream& input)
+R day1_part2(std::ifstream& input)
 {
     std::string line;
     std::vector<int> history;
-    int result = 0;
+    R result = 0;
 
     while (std::getline(input, line))
     {

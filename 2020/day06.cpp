@@ -6,7 +6,7 @@
 
 #include "manager.h"
 
-int day6_part1(std::ifstream& input)
+R day6_part1(std::ifstream& input)
 {
     std::string line;
     int result = 0;
@@ -28,7 +28,7 @@ int day6_part1(std::ifstream& input)
     return result;
 }
 
-int day6_part2(std::ifstream& input)
+R day6_part2(std::ifstream& input)
 {
     std::string line;
     int result = 0;

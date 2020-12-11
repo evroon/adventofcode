@@ -19,11 +19,11 @@
 #include "day10.cpp"
 #include "day11.cpp"
 
-int run_day(uint day)
+R run_day(uint day)
 {
     std::ifstream input;
-    int (*function)(std::ifstream &input) = nullptr;
-    int result = -1;
+    R (*function)(std::ifstream &input) = nullptr;
+    R result = -1;
     auto days = SolutionManager::get_singleton()->days;
 
     if (days.count(day) > 0) {
