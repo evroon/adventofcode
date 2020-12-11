@@ -15,7 +15,9 @@ std::map<uint, uint> expected_outputs = {
     {6, 3476},
     {7, 6683},
     {8, 1984},
-    {9, 129444555}
+    {9, 129444555},
+    {10, 256},
+    {11, 2144}
 };
 
 class CombinationsTest :
