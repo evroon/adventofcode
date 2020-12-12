@@ -18,6 +18,7 @@
 #include "day09.cpp"
 #include "day10.cpp"
 #include "day11.cpp"
+#include "day12.cpp"
 
 R run_day(uint day)
 {
