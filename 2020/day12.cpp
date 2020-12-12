@@ -8,7 +8,7 @@
 
 #include "manager.h"
 
-#define PI 3.1415
+#define PI 3.14159265359
 
 
 R day12_part1(std::ifstream& input)
@@ -88,10 +88,18 @@ R day12_part2(std::ifstream& input)
             diff = {0, -1};
         else if (list[c].first == 'W')
             diff = {-1, 0};
-        else if (list[c].first == 'L')
-            waypoint = rotate(waypoint, 360-value);
-        else if (list[c].first == 'R')
-            waypoint = rotate(waypoint, value);
+        else if (list[c].first == 'L') {
+            double angle = value * PI / 180.0 + atan2(waypoint.second, waypoint.first);
+            double distance = sqrt(pow(waypoint.second, 2) + pow(waypoint.first, 2));
+            waypoint.first = round(distance * cos(angle));
+            waypoint.second = round(distance * sin(angle));
+        }
+        else if (list[c].first == 'R') {
+            double angle = -value * PI / 180.0 + atan2(waypoint.second, waypoint.first);
+            double distance = sqrt(pow(waypoint.second, 2) + pow(waypoint.first, 2));
+            waypoint.first = round(distance * cos(angle));
+            waypoint.second = round(distance * sin(angle));
+        }
         else if (list[c].first == 'F') {
             position.first += value * waypoint.first;
             position.second += value * waypoint.second;
