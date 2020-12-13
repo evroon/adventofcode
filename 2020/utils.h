@@ -159,3 +159,17 @@ bool is_hex(const std::string& str) {
     }
     return true;
 }
+
+// Recursive function to return gcd of a and b
+R gcd(R a, R b)
+{
+  if (b == 0)
+    return a;
+  return gcd(b, a % b);
+}
+
+// Function to return LCM of two numbers
+R lcm(R a, R b)
+{
+    return (a / gcd(a, b)) * b;
+}
