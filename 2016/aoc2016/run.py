@@ -3,7 +3,7 @@ import sys
 
 
 def run_day(day: int, is_part_two: bool = False) -> str:
-    input_file = f'2016/inputs/day{day:02d}.txt'
+    input_file = f'inputs/day{day:02d}.txt'
 
     try:
         day = importlib.import_module(f'.day{day:02d}', __package__)

@@ -18,7 +18,7 @@ else
 	DAY=$(date +%-d)
 fi
 
-TARGET_FILE=$(printf "$YEAR/inputs/day%02d.txt" "$DAY")
+TARGET_FILE=$(printf "inputs/day%02d.txt" "$DAY")
 
 echo "Going to download input of year $YEAR and day $DAY to $TARGET_FILE"
 

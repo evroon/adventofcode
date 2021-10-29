@@ -6,6 +6,7 @@ from aoc2016.run import run_day
 outcomes = {
     1: [242, 150],
     2: ['84452', 'D65C3'],
+    3: [869, None]
 }
 
 
