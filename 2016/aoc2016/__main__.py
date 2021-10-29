@@ -4,11 +4,19 @@ from .run import run_day
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument('day', type=int)
+    parser.add_argument('day', type=str)
     parser.add_argument('-2', '--part2', action='store_true')
 
     args = parser.parse_args()
-    result = run_day(args.day, args.part2)
+    day = args.day
+
+    # Extract day from file name.
+    if 'day' in day:
+        day = int(day[3:5])
+    else:
+        day = int(day)
+
+    result = run_day(day, args.part2)
     print(result)
 
 
