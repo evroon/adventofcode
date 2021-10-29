@@ -14,7 +14,7 @@ def distance(loc: Tuple[int, int]) -> int:
     return abs(loc[0]) + abs(loc[1])
 
 
-def part1(input: str) -> int:
+def part1(input: str) -> str:
     dir = 0
     lines = input.split('\n')
     location = (1, 1)
