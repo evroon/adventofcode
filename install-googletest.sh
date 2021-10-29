@@ -1,19 +1,9 @@
 #!/bin/bash
 
-VERSION=1.8.0
-
-sudo apt install googletest
-
-cd /tmp || exit
-wget "https://github.com/google/googletest/archive/release-$VERSION.tar.gz"
-tar xzf "release-$VERSION.tar.gz"
-cd "googletest-release-$VERSION" || exit
-
-mkdir build && cd build || exit
-cmake ..
-make -j
-
-sudo cp -r ../googletest/include /usr/local/include
-sudo cp -r ./googlemock/gtest/libgtest*.a /usr/local/lib/
-sudo cp -r ./googlemock/libgmock*.a /usr/local/lib/
-
+git clone https://github.com/google/googletest.git -b release-1.11.0
+cd googletest || exit # Main directory of the cloned repository.
+mkdir build           # Create a directory to hold the build output.
+cd build || exit
+cmake ..              # Generate native build scripts for GoogleTest.
+make
+sudo make install     # Install in /usr/local/ by default
