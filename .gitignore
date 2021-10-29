@@ -1,6 +1,8 @@
 *.out
 .vscode
 
+__pycache__
+
 # CMake stuff etc.
 **/build
 **/target
