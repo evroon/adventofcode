@@ -1,4 +1,4 @@
-name: test
+name: C++ tests
 
 # Source: https://github.com/bastianhjaeger/github_actions_gtest_example
 on: [push, pull_request]
