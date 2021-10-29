@@ -1,20 +1,16 @@
 name: test
 
 # Source: https://github.com/bastianhjaeger/github_actions_gtest_example
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+on: [push, pull_request]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
     - name: Install googletest manually
-      run: sudo apt install python3-pytest libgtest-dev && cd /usr/src/googletest/googletest && sudo cmake CMakeLists.txt && sudo make && sudo cp *.a /usr/lib && sudo ln -s /usr/lib/libgoogletest.a /usr/local/lib/libgoogletest.a && sudo ln -s /usr/lib/libgoogletest_main.a /usr/local/lib/libgoogletest_main.a
+      run: ./install-googletest.sh
     - uses: actions/checkout@v1
-    - name: configure
+    - name: configure 2020
       run: cd 2020 && mkdir build && cd build && cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-Werror" ..
     - name: make
       run: cd 2020/build && make -j 8
