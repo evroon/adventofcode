@@ -1,5 +1,6 @@
 *.out
 .vscode
+.idea/workspace.xml
 
 __pycache__
 .pytest_cache
