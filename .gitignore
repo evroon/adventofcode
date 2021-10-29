@@ -16,3 +16,5 @@ Makefile
 **/adventofcode
 run_tests
 run_day
+
+.idea/shelf
