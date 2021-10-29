@@ -3,12 +3,7 @@ import itertools
 from aoc2016.run import run_day
 
 
-outcomes = {
-    1: [242, 150],
-    2: ['84452', 'D65C3'],
-    3: [869, 1544],
-    4: [278221, 267],
-}
+outcomes = { }
 
 
 @pytest.mark.parametrize(
