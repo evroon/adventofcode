@@ -1,7 +1,7 @@
 name: C++ tests
 
 # Source: https://github.com/bastianhjaeger/github_actions_gtest_example
-on: [push, pull_request]
+on: workflow_dispatch
 
 jobs:
   build:
@@ -16,5 +16,3 @@ jobs:
       run: cd 2020/build && make -j 8
     - name: Run 2020 tests
       run: cd /home/runner/work/adventofcode/adventofcode/2020/build && ./run_tests
-    - name: Run 2016 tests
-      run: cd /home/runner/work/adventofcode/adventofcode/2016 && pytest-3
