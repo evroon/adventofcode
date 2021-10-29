@@ -2,6 +2,8 @@
 
 VERSION=1.8.0
 
+sudo apt install googletest
+
 cd /tmp || exit
 wget "https://github.com/google/googletest/archive/release-$VERSION.tar.gz"
 tar xzf "release-$VERSION.tar.gz"

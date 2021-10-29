@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - name: Install pytest
-      run: python3 -m pip install -r requirements.txt
+    - name: Install dependencies
+      run: sudo apt install python3-pytest && python3 -m pip install -r requirements.txt
     - name: Run 2016 tests
       run: cd 2016 && pytest-3
