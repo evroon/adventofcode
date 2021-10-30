@@ -1,7 +1,7 @@
 from typing import List, Tuple
 
 
-def get_part_in_string(src: str, start, end) -> Tuple[List[str], List[str]]:
+def get_part_in_string(src: str, start: str, end: str) -> Tuple[List[str], List[str]]:
     rest = src
     inside, outside = [], []
 
