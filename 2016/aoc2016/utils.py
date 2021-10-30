@@ -15,3 +15,7 @@ def get_part_in_string(src: str, start: str, end: str) -> Tuple[List[str], List[
 
     outside.append(rest)
     return inside, outside
+
+
+def get_text_in_between(src: str, left: str, right: str) -> str:
+    return src.split(right)[0].split(left)[1]
