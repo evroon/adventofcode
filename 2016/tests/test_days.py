@@ -11,6 +11,7 @@ outcomes = {
     5: ['4543c154', '1050cbbd'],
     6: ['asvcbhvg', 'odqnikqv'],
     7: [118, 260],
+    8: [119, None]
 }
 
 
