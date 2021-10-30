@@ -10,6 +10,7 @@ outcomes = {
     4: [278221, 267],
     5: [None, None],
     6: ['asvcbhvg', 'odqnikqv'],
+    7: [118, 260],
 }
 
 
