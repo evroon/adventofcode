@@ -11,10 +11,12 @@ def main() -> None:
     day = args.day
 
     # Extract day from file name.
-    if 'day' in day:
+    if day.startswith('day'):
         day = int(day[3:5])
-    else:
+    elif day.isnumeric():
         day = int(day)
+    else:
+        raise ValueError('Invalid day')
 
     result = run_day(day, args.part2)
     print(result)
