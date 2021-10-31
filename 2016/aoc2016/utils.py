@@ -19,3 +19,7 @@ def get_part_in_string(src: str, start: str, end: str) -> Tuple[List[str], List[
 
 def get_text_in_between(src: str, left: str, right: str) -> str:
     return src.split(right)[0].split(left)[1]
+
+
+def get_text_in_between_reverse(src: str, left: str, right: str) -> str:
+    return src.split(left)[1].split(right)[0]
