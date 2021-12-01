@@ -16,3 +16,6 @@ jobs:
 
     - name: Run 2018 tests
       run: cd 2018 && pytest-3
+
+    - name: Run 2021 tests
+      run: cd 2021 && pytest-3

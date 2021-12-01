@@ -1,9 +1,11 @@
 import pytest
 import itertools
-from aoc2016.run import run_day
+from aoc2021.run import run_day
 
 
-outcomes = { }
+outcomes = {
+    1: [1688, 1728],
+}
 
 
 @pytest.mark.parametrize(
