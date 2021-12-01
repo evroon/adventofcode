@@ -1,6 +1,6 @@
 *.out
 .vscode
-.idea/workspace.xml
+.idea
 
 __pycache__
 .pytest_cache
@@ -16,5 +16,3 @@ Makefile
 **/adventofcode
 run_tests
 run_day
-
-.idea/shelf
