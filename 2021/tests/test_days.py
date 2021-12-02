@@ -5,6 +5,7 @@ from aoc2021.run import run_day
 
 outcomes = {
     1: [1688, 1728],
+    2: [2150351, 1842742223],
 }
 
 
