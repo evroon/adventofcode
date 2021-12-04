@@ -12,8 +12,7 @@ def run_day(day: int, is_part_two: bool = False) -> str:
         if is_part_two:
             function = day.part2
 
-        with open(input_file, 'r') as f:
-            return function(f.read())
+        return function(input_file)
 
     except ImportError:
         sys.exit(f'Invalid day: {day}')
