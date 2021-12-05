@@ -30,11 +30,10 @@ def play(input_file: str, to_the_end: bool) -> int:
         res = check_bingo(marked, wins)
         if len(res) > 0:
             for r in res:
-                if not wins[r]:
-                    last_won_score = np.sum(board[r, ~marked[r, ...]]) * picked
-                    wins[r] = True
-                    if not to_the_end:
-                        return last_won_score
+                last_won_score = np.sum(board[r, ~marked[r, ...]]) * picked
+                wins[r] = True
+                if not to_the_end:
+                    return last_won_score
 
     return last_won_score
 
