@@ -1,0 +1,15 @@
+name: Rust tests
+
+on: [push, workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: Run 2022 cargo-fmt
+      run: cd 2022 && cargo-fmt
+
+    - name: Run 2022 tests
+      run: cd 2022 && cargo test

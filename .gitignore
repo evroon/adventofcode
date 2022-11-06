@@ -16,3 +16,4 @@ Makefile
 **/adventofcode
 run_tests
 run_day
+2022/Cargo.lock
