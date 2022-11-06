@@ -5,7 +5,7 @@ authors = ["Erik Vroon <erik.vroon22@gmail.com>"]
 edition = "2021"
 
 [dependencies]
-clap = "2.32"
+clap = "4.0"
 regex = "1.1.0"
 chrono = "0.4.6"
 itertools = "0.10"
