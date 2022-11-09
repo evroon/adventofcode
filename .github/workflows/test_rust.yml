@@ -3,13 +3,47 @@ name: Rust tests
 on: [push, workflow_dispatch]
 
 jobs:
-  build:
+  ci:
+    name: Continuous Integration
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        toolchain:
+          - stable
+          - beta
+        experimental: [false]
+        include:
+          - toolchain: nightly
+            experimental: true
+
     steps:
-    - uses: actions/checkout@v1
+      - uses: actions/checkout@v3
 
-    - name: Run 2022 cargo-fmt
-      run: cd 2022 && cargo-fmt
+      - name: Install toolchain
+        uses: actions-rs/toolchain@v1
+        with:
+          profile: minimal
+          toolchain: ${{ matrix.toolchain }}
+          override: true
+          components: rustfmt, clippy
 
-    - name: Run 2022 tests
-      run: cd 2022 && cargo test
+      - name: Set up caching
+        uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: 2022 -> target
+
+      - name: Build binaries
+        working-directory: 2022
+        run: cargo build --all-targets
+
+      - name: Run cargo-fmt
+        working-directory: 2022
+        run: cargo-fmt
+
+      - name: Run clippy
+        working-directory: 2022
+        run: cargo clippy -- --deny warnings
+
+      - name: Run tests
+        working-directory: 2022
+        run: cargo test
