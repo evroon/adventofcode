@@ -1,0 +1,11 @@
+[package]
+name = "aoc_2018"
+version = "0.1.0"
+authors = ["Erik Vroon <erik.vroon22@gmail.com>"]
+edition = "2021"
+
+[dependencies]
+clap = { version = "4.0", features = ["derive"] }
+regex = "1.1.0"
+chrono = "0.4.6"
+itertools = "0.10"

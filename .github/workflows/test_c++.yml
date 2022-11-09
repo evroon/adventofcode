@@ -8,11 +8,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
+
     - name: Install googletest manually
       run: ./install-googletest.sh
+
     - name: configure 2020
       run: cd 2020 && mkdir build && cd build && cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-Werror" ..
+
     - name: make
-      run: cd 2020/build && make -j 8
+      working-directory: 2020/build
+      run: make -j 8
+
     - name: Run 2020 tests
-      run: cd /home/runner/work/adventofcode/adventofcode/2020/build && ./run_tests
+      working-directory: 2020/build
+      run: ./run_tests
