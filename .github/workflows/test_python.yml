@@ -12,7 +12,7 @@ jobs:
       run: sudo apt install python3-pytest && python3 -m pip install -r requirements.txt
 
     - name: Run 2016 tests
-      working-directory: 2016/python
+      working-directory: 2016
       run: pytest-3
 
     - name: Run 2018 tests
@@ -20,5 +20,5 @@ jobs:
       run: pytest-3
 
     - name: Run 2021 tests
-      working-directory: 2021/python
+      working-directory: 2021
       run: pytest-3

@@ -16,7 +16,8 @@ jobs:
       run: cd 2020 && mkdir build && cd build && cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-Werror" ..
 
     - name: make
-      run: cd 2020/build && make -j 8
+      working-directory: 2020/build
+      run: make -j 8
 
     - name: Run 2020 tests
       working-directory: 2020/build
