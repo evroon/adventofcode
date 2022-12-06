@@ -49,5 +49,5 @@ fn main() {
         eprintln!("Duration: {:?}", Instant::now().duration_since(begin));
     }
 
-    println!("{}", result);
+    println!("{result}");
 }
