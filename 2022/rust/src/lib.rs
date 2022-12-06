@@ -18,7 +18,7 @@ mod tests {
     #[test]
     fn test_get_impl() {
         // Verify that we can load all days
-        let last_implemented = 1;
+        let last_implemented = 0;
         for d in 1..=last_implemented {
             get_impl(d);
         }
