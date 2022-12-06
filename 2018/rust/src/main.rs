@@ -31,12 +31,14 @@ struct Args {
 
 fn main() {
     let args = Args::parse();
-    println!("inputs/{:0>2}.txt", args.day);
+
+    let input_path = "inputs/day{:0>2}.txt";
+    println!(input_path, args.day);
 
     let mut implementation = get_impl(args.day);
     let mut data: Box<dyn io::Read> = match args.stdin {
         true => Box::new(io::stdin()),
-        false => Box::new(fs::File::open(format!("inputs/{:0>2}.txt", args.day)).unwrap()),
+        false => Box::new(fs::File::open(format!(input_path, args.day)).unwrap()),
     };
 
     let begin = Instant::now();

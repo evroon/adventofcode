@@ -36,7 +36,7 @@ fn main() {
     let mut implementation = get_impl(args.day);
     let mut data: Box<dyn io::Read> = match args.stdin {
         true => Box::new(io::stdin()),
-        false => Box::new(fs::File::open(format!("inputs/{:0>2}.txt", args.day)).unwrap()),
+        false => Box::new(fs::File::open(format!("../inputs/day{:0>2}.txt", args.day)).unwrap()),
     };
 
     let begin = Instant::now();

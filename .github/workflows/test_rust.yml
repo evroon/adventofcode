@@ -30,20 +30,20 @@ jobs:
       - name: Set up caching
         uses: Swatinem/rust-cache@v2
         with:
-          workspaces: 2022 -> target
+          workspaces: 2022 -> rust -> target
 
       - name: Build binaries
-        working-directory: 2022
+        working-directory: 2022/rust
         run: cargo build --all-targets
 
       - name: Run cargo-fmt
-        working-directory: 2022
+        working-directory: 2022/rust
         run: cargo-fmt
 
       - name: Run clippy
-        working-directory: 2022
+        working-directory: 2022/rust
         run: cargo clippy -- --deny warnings
 
       - name: Run tests
-        working-directory: 2022
+        working-directory: 2022/rust
         run: cargo test

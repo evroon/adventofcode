@@ -2,12 +2,15 @@
 .vscode
 .idea
 
+# Python
 __pycache__
 .pytest_cache
 
-# CMake stuff etc.
-**/build
-**/target
+# Rust
+**/rust/target
+
+# CMake
+build
 CMake*
 !CMakeLists.txt
 *.cmake
