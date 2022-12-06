@@ -7,7 +7,7 @@ pub mod common;
 pub fn get_impl(day: u32) -> Box<dyn common::Solution> {
     match day {
         1 => panic!("Unimplemented day 1"),
-        val => panic!("Unimplemented day {}", val),
+        val => panic!("Unimplemented day {val}"),
     }
 }
 
