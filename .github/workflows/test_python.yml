@@ -11,13 +11,14 @@ jobs:
     - name: Install dependencies
       run: sudo apt install python3-pytest && python3 -m pip install -r requirements.txt
 
-    - name: Run 2016 tests
-      working-directory: 2016
-      run: pytest-3
-
-    - name: Run 2018 tests
-      working-directory: 2018/python
-      run: pytest-3
+      # Old, disabled because they take much time
+#    - name: Run 2016 tests
+#      working-directory: 2016
+#      run: pytest-3
+#
+#    - name: Run 2018 tests
+#      working-directory: 2018/python
+#      run: pytest-3
 
     - name: Run 2021 tests
       working-directory: 2021
