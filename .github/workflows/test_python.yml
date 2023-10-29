@@ -22,3 +22,7 @@ jobs:
     - name: Run 2021 tests
       working-directory: 2021
       run: pytest-3
+
+    - name: Run 2023 tests
+      working-directory: 2023
+      run: pytest-3
