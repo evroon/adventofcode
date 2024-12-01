@@ -20,3 +20,5 @@ Makefile
 run_tests
 run_day
 Cargo.lock
+
+2024/inputs
