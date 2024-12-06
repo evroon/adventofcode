@@ -22,3 +22,5 @@ run_day
 Cargo.lock
 
 2024/inputs
+
+/2024/poetry.lock
